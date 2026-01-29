@@ -1,0 +1,98 @@
+[
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 0.0,
+        "justification": "# CRITERION: Validity of JSON Structure and Content\n\n# RESULT: FAIL\n\n## Issues Found:\n1. `\"IndicationTabs\": {\"title\": \"Systemic Lupus Erythematosus\"}`\n   **Issue**: The `output_json` field does not accurately reflect the detailed information provided in the `input_text`. The title \"Systemic Lupus Erythematosus\" is overly generic and does not capture the specific details such as the indication for SAPHNELO, its limitations of use, or the context of its administration.\n   **Fix**: The `output_json` should include more detailed and structured information extracted from the `input_text`. For example:\n   ```json\n   {\n       \"IndicationTabs\": {\n           \"title\": \"Systemic Lupus Erythematosus\",\n           \"indications\": \"SAPHNELO is indicated for the treatment of adult patients with moderate to severe systemic lupus erythematosus (SLE), who are receiving background immunosuppressive therapy.\",\n           \"limitations_of_use\": \"SAPHNELO is not recommended for use in patients with severe active lupus nephritis or severe active central nervous system lupus.\"\n       }\n   }\n   ```\n\n2. `\"input_text\": \"1 INDICATIONS AND USAGE: SAPHNELO is indicated for the treatment of adult patients with moderate to severe systemic lupus erythematosus (SLE), who are receiving background immunosuppressive therapy. Limitations of Use: SAPHNELO is not recommended for use in patients with severe active lupus nephritis or severe active central nervous system lupus. 2 DOSAGE AND ADMINISTRATION: The recommended dosage of SAPHNELO is 300 mg administered as an intravenous infusion over a 30-minute period every 4 weeks. 6 ADVERSE REACTIONS: The most common adverse reactions (incidence \u2265 20%) were nasopharyngitis, upper respiratory tract infection, and infusion-related reactions. 8.4 Pediatric Use: The safety and efficacy of SAPHNELO in pediatric patients have not been established.\"`\n   **Issue**: The `input_text` contains detailed information, but the `output_json` does not adequately summarize or structure this information. Key sections such as \"Dosage and Administration\" and \"Adverse Reactions\" are omitted entirely.\n   **Fix**: The `output_json` should include structured data for all relevant sections of the `input_text`. For example:\n   ```json\n   {\n       \"IndicationTabs\": {\n           \"title\": \"Systemic Lupus Erythematosus\",\n           \"indications\": \"SAPHNELO is indicated for the treatment of adult patients with moderate to severe systemic lupus erythematosus (SLE), who are receiving background immunosuppressive therapy.\",\n           \"limitations_of_use\": \"SAPHNELO is not recommended for use in patients with severe active lupus nephritis or severe active central nervous system lupus.\",\n           \"dosage_and_administration\": \"300 mg administered as an intravenous infusion over a 30-minute period every 4 weeks.\",\n           \"adverse_reactions\": \"The most common adverse reactions (incidence \u2265 20%) were nasopharyngitis, upper respiratory tract infection, and infusion-related reactions.\",\n           \"pediatric_use\": \"The safety and efficacy of SAPHNELO in pediatric patients have not been established.\"\n       }\n   }\n   ```\n\n## Additional Notes:\n- The `output_json` should aim to capture all relevant sections of the `input_text` in a structured and hierarchical format.\n- The current `output_json` is overly simplistic and fails to represent the richness of the `input_text`.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "IndicationTabs.title"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 1.0,
+        "justification": "# CRITERION: Valid JSON Structure\n\n# RESULT: PASS\n\n## Issues Found:\n[None]\n\n## Additional Notes:\n- The JSON structure appears to be correctly formatted with both input and output sections.\n- The response includes relevant information about SAPHNELO, including indications, dosage, adverse reactions, and pediatric use.\n- The output JSON correctly extracts the indication usage information.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "IndicationUsage.label_text"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 0.0,
+        "justification": "# CRITERION: Validity of JSON Response and Alignment with Input Text\n\n# RESULT: FAIL\n\n## Issues Found:\n1. `\"output_json\": {\"IndicationUsage\": {\"setting\": \"Moderate to severe disease state\"}}`\n   **Issue**: The `output_json` does not fully align with the input text. The input text specifies that SAPHNELO is indicated for \"moderate to severe systemic lupus erythematosus (SLE), who are receiving background immunosuppressive therapy.\" However, the `output_json` only mentions \"Moderate to severe disease state,\" which is vague and does not specify the condition (SLE) or the requirement for background immunosuppressive therapy.\n   **Fix**: Update the `output_json` to include the full context from the input text. For example:\n   ```json\n   \"output_json\": {\"IndicationUsage\": {\"setting\": \"Moderate to severe systemic lupus erythematosus (SLE) in patients receiving background immunosuppressive therapy\"}}\n   ```\n\n2. `\"Limitations of Use\"` and `\"Adverse Reactions\"` sections in the input text\n   **Issue**: The `output_json` does not capture critical information from the input text, such as the limitations of use (e.g., not recommended for severe active lupus nephritis or severe active central nervous system lupus) and the most common adverse reactions (e.g., nasopharyngitis, upper respiratory tract infection, and infusion-related reactions).\n   **Fix**: Expand the `output_json` to include these details. For example:\n   ```json\n   \"output_json\": {\n       \"IndicationUsage\": {\n           \"setting\": \"Moderate to severe systemic lupus erythematosus (SLE) in patients receiving background immunosuppressive therapy\",\n           \"limitations\": \"Not recommended for severe active lupus nephritis or severe active central nervous system lupus\"\n       },\n       \"AdverseReactions\": {\n           \"common\": [\"nasopharyngitis\", \"upper respiratory tract infection\", \"infusion-related reactions\"]\n       }\n   }\n   ```\n\n3. `\"Pediatric Use\"` section in the input text\n   **Issue**: The `output_json` does not include information about the safety and efficacy of SAPHNELO in pediatric patients, which is explicitly mentioned in the input text.\n   **Fix**: Add a section to the `output_json` to reflect this information. For example:\n   ```json\n   \"output_json\": {\n       \"PediatricUse\": \"The safety and efficacy of SAPHNELO in pediatric patients have not been established.\"\n   }\n   ```\n\n## Additional Notes:\n- The `output_json` should comprehensively reflect all key details from the input text to ensure accuracy and completeness.\n- The current `output_json` is overly simplified and omits critical information, which could lead to misinterpretation or incomplete understanding of the drug's indications, limitations, and adverse reactions.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "IndicationUsage.setting"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 1.0,
+        "justification": "# CRITERION: Valid JSON Structure\n\n# RESULT: PASS\n\n## Issues Found:\n[None]\n\n## Additional Notes:\n- The JSON structure is correctly formatted with both input_text and output_json keys.\n- The output_json provides a relevant mapping for the IndicationUsage, which aligns with the input_text.\n- No syntax errors or structural issues are present in the JSON data.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "IndicationUsage.line_of_therapy"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 0.0,
+        "justification": "# CRITERION: Valid JSON Structure\n\n# RESULT: FAIL\n\n## Issues Found:\n1. `\"output_json\": {\"IndicationUsage\": {\"regimen\": {\"components\": [\"Anifrolumab\"]}}}`\n   **Issue**: The JSON structure does not align with the input text provided. The input text does not mention \"Anifrolumab\" explicitly, which is a discrepancy.\n   **Fix**: Ensure the JSON output accurately reflects the information provided in the input text. If \"Anifrolumab\" is intended to be included, it should be mentioned in the input text.\n\n## Additional Notes:\n- The JSON output should be consistent with the information provided in the input text.\n- Ensure that all components mentioned in the JSON are supported by the input text to maintain accuracy and relevance.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "IndicationUsage.regimen.components"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 1.0,
+        "justification": "# CRITERION: JSON Structure and Content Validation\n\n# RESULT: PASS\n\n## Issues Found:\n[None]\n\n## Additional Notes:\n- The JSON structure appears to be correctly formatted with keys \"input_text\" and \"output_json\".\n- The \"output_json\" contains a \"TargetPopulation\" key with an \"age_range\" value, which is consistent with the information provided in the \"input_text\".\n- No inconsistencies or errors were found in the JSON content.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "TargetPopulation.age_range"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 0.0,
+        "justification": "# CRITERION: Validity of Extracted Information from Input Text\n\n# RESULT: FAIL\n\n## Issues Found:\n1. `\"TargetPopulation\": {\"prior_therapy\": \"Receiving background immunosuppressive therapy\"}`\n   **Issue**: The extracted information in the `output_json` is incomplete. While the input text specifies that SAPHNELO is indicated for adult patients with moderate to severe systemic lupus erythematosus (SLE) who are receiving background immunosuppressive therapy, the `output_json` only captures the \"receiving background immunosuppressive therapy\" part and omits the critical context of \"adult patients with moderate to severe systemic lupus erythematosus (SLE).\"\n   **Fix**: Update the `output_json` to include the full context of the target population. For example:\n   ```json\n   \"TargetPopulation\": {\n       \"prior_therapy\": \"Receiving background immunosuppressive therapy\",\n       \"condition\": \"Adult patients with moderate to severe systemic lupus erythematosus (SLE)\"\n   }\n   ```\n\n## Additional Notes:\n- The response does not fully capture the precision required for extracting information from the input text. The omission of critical details about the target population reduces the accuracy and relevance of the output.\n- No other issues were identified in the response.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "TargetPopulation.prior_therapy"
+  },
+  {
+    "evaluator_results": [
+      {
+        "evaluator_name": "Precision",
+        "score": 1.0,
+        "justification": "# CRITERION: Valid JSON Structure\n\n# RESULT: PASS\n\n## Issues Found:\n[None]\n\n## Additional Notes:\n- The JSON structure is correctly formatted with both input and output sections.\n- The response accurately reflects the information provided in the input text.\n- The output JSON correctly lists common adverse events with an incidence of 20% or more.",
+        "evaluator_id": "767bdd49-5f8c-48ca-8324-dfd6be7f8a79",
+        "evaluator_version_id": "52c5a66e-e1c4-4a9f-b0ca-f3db37bad985"
+      }
+    ],
+    "evaluated_field": "SafetyTolerability.common_AEs_20pct_plus"
+  }
+]

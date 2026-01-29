@@ -1,0 +1,206 @@
+{
+    "ProductOverview": {
+        "product_name": "SAPHNELO (anifrolumab-fnia)",
+        "sponsor": "AstraZeneca",
+        "mechanism_of_action_summary": "Anifrolumab-fnia is a human IgG1κ monoclonal antibody that binds to subunit 1 of the type I interferon receptor (IFNAR) with high specificity and affinity. This binding inhibits type I IFN signaling, thereby blocking the biologic activity of type I IFNs. Anifrolumab-fnia also induces the internalization of IFNAR1, thereby reducing the levels of cell surface IFNAR1 available for receptor assembly.",
+        "initial_us_approval": "Not specified in package insert"
+    },
+    "GlobalSections": {
+        "SafetySummary": {
+            "immune_mediated_warnings": [
+                "Serious Infections: Serious and sometimes fatal infections have occurred in patients receiving SAPHNELO",
+                "Hypersensitivity Reactions Including Anaphylaxis: Serious hypersensitivity reactions including anaphylaxis and angioedema have been reported",
+                "Malignancy: Consider the individual benefit-risk in patients with known risk factors for malignancy"
+            ],
+            "monitoring_guidance": "Monitor patients for signs or symptoms of clinically significant infection. If a patient develops an infection, or is not responding to standard anti-infective therapy, monitor the patient closely and consider interrupting SAPHNELO therapy until the infection resolves. SAPHNELO should be administered by healthcare providers prepared to manage hypersensitivity reactions, including anaphylaxis.",
+            "most_common_AEs_single_agent": [
+                "Nasopharyngitis",
+                "Upper respiratory tract infections (34%)",
+                "Bronchitis (11%)",
+                "Infusion-related reactions (9.4%)",
+                "Herpes Zoster (6.1%)",
+                "Cough (5.0%)",
+                "Respiratory tract infection (3.3%)",
+                "Hypersensitivity (2.8%)"
+            ],
+            "most_common_AEs_combo_chemo": [
+                "Not applicable - SAPHNELO is not used in combination with chemotherapy"
+            ],
+            "discontinuation_or_interruptions_examples": {
+                "overall_discontinuation_rates": {
+                    "single_agent": "Information not explicitly provided in package insert",
+                    "combination_therapy": "Not applicable"
+                },
+                "common_discontinuation_reasons": {
+                    "serious_infections": "4.8% incidence",
+                    "herpes_zoster": "6.1% incidence, including disseminated cases",
+                    "hypersensitivity": "2.8% incidence"
+                }
+            }
+        },
+        "DosageAdministration": {
+            "recommended_dose_adults": [
+                "300 mg every 4 weeks"
+            ],
+            "administration": "Administer as an intravenous infusion over a 30-minute period through an infusion line containing a sterile, low-protein binding 0.2 to 15 micron in-line or add-on filter. Do not co-administer other medicinal products through the same infusion line.",
+            "patient_selection_PD_L1_required": [
+                "No biomarker testing required"
+            ],
+            "pediatrics": "The safety and efficacy of SAPHNELO in pediatric patients less than 18 years of age have not been established",
+            "formulation": "Injection: 300 mg/2 mL (150 mg/mL) in a single-dose vial",
+            "prep_and_storage": {
+                "inspect_and_dilute": "Visually inspect the vial for particulate matter and discoloration. SAPHNELO is a clear to opalescent, colorless to slightly yellow, solution. Discard the vial if the solution is cloudy, discolored or visible particles are observed. Do not shake the vial. Withdraw and discard 2 mL of solution from a 50 mL or 100 mL 0.9% Sodium Chloride Injection, USP infusion bag. Withdraw 2 mL of solution from the vial of SAPHNELO and add it to the infusion bag. Mix the solution by gentle inversion. Do not shake.",
+                "storage": [
+                    "Room temperature (59°F to 77°F, 15°C to 25°C): up to 4 hours",
+                    "Refrigerated (36°F to 46°F, 2°C to 8°C): up to 24 hours",
+                    "Do not freeze",
+                    "Protect from light",
+                    "If refrigerated, allow the diluted SAPHNELO solution to reach room temperature prior to administration"
+                ]
+            }
+        },
+        "ClinicalPharmacology": {
+            "moa": "Anifrolumab-fnia is a human IgG1κ monoclonal antibody that binds to subunit 1 of the type I interferon receptor (IFNAR) with high specificity and affinity. This binding inhibits type I IFN signaling, thereby blocking the biologic activity of type I IFNs. Anifrolumab-fnia also induces the internalization of IFNAR1, thereby reducing the levels of cell surface IFNAR1 available for receptor assembly. Blockade of receptor mediated type I IFN signaling inhibits IFN responsive gene expression as well as downstream inflammatory and immunological processes. Inhibition of type I IFN blocks plasma cell differentiation and normalizes peripheral T-cell subsets.",
+            "pk_summary": {
+                "linearity": "Anifrolumab-fnia exhibits non-linear PK in the dose range of 100 mg to 1000 mg with more than dose-proportional increases in the exposure as measured by AUC",
+                "half_life": "Not explicitly stated in package insert",
+                "clearance": "0.193 L/day at steady state for anifrolumab-fnia at a dose of 300 mg via intravenous infusion every 4 weeks",
+                "volume_distribution": "6.23 L at steady state for a typical patient with SLE (69.1 kg)"
+            }
+        },
+        "ProductPresentation": {
+            "form": "Injection",
+            "strength": "300 mg/2 mL (150 mg/mL)",
+            "route": "Intravenous use",
+            "description": "Clear to opalescent, colorless to slightly yellow, solution in a single-dose vial",
+            "packaging_options": [
+                {
+                    "configuration": "Information not specified in provided package insert",
+                    "NDC": "Not specified",
+                    "contents": "300 mg/2 mL single-dose vial"
+                }
+            ],
+            "storage_requirements": {
+                "temperature": "Information not specified in provided sections",
+                "protection": "Protect from light",
+                "handling_restrictions": [
+                    "Do not freeze",
+                    "Do not shake"
+                ]
+            }
+        },
+        "RegulatoryPathway": {
+            "region": "USA",
+            "recent_major_label_changes": [
+                "Warnings and Precautions, Serious Infections (5.1) 12/2023"
+            ]
+        },
+        "UseInSpecificPopulations": {
+            "pregnancy": {
+                "risk_summary": "The limited human data with SAPHNELO use in pregnant women are insufficient to inform on drug-associated risk for major birth defects, miscarriage, or adverse maternal or fetal outcome. Monoclonal IgG antibodies are known to be actively transported across the placenta as pregnancy progresses; therefore, anifrolumab-fnia exposure to the fetus may be greater during the third trimester of pregnancy. In an enhanced pre- and post-natal development study with pregnant cynomolgus monkeys that received intravenous administration of anifrolumab-fnia, there was no evidence of embryotoxicity or fetal malformations with exposures up to approximately 28-times the exposure at the maximum recommended human dose (MRHD) on an Area Under Curve (AUC) basis.",
+                "contraception_requirement": "Not explicitly specified in package insert",
+                "pregnancy_testing": "A pregnancy exposure registry monitors pregnancy outcomes in women exposed to SAPHNELO during pregnancy. Contact AstraZeneca at 1-877-693-9268"
+            },
+            "lactation": "No data are available regarding the presence of SAPHNELO in human milk, the effects on the breastfed child, or the effects on milk production. Anifrolumab-fnia was detected in the milk of female cynomolgus monkeys administered anifrolumab-fnia. The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for anifrolumab-fnia and any potential adverse effects on the breast-fed child from anifrolumab-fnia or from the underlying maternal condition.",
+            "pediatric_use": {
+                "established_indications": "The safety and efficacy of SAPHNELO in pediatric patients less than 18 years of age have not been established",
+                "adverse_reactions_higher_in_pediatrics": [
+                    "Not applicable - not established in pediatric population"
+                ],
+                "dosing": "Not established"
+            },
+            "geriatric_use": {
+                "safety_profile": "Of the 664 patients with SLE exposed to anifrolumab-fnia in clinical trials, 3% (n=20) were 65 and over. The number of patients aged 65 years of age and older was not sufficient to determine whether they respond differently from younger adult patients.",
+                "special_considerations": "Limited PK data are available for elderly patients"
+            }
+        }
+    },
+    "IndicationTabs": [
+        {
+            "title": "Systemic Lupus Erythematosus (SLE)",
+            "IndicationUsage": {
+                "label_text": "for the treatment of adult patients with moderate to severe systemic lupus erythematosus (SLE), who are receiving standard therapy. Limitations of Use: The efficacy of SAPHNELO has not been evaluated in patients with severe active lupus nephritis or severe active central nervous system lupus. Use of SAPHNELO is not recommended in these situations.",
+                "setting": "moderate to severe systemic lupus erythematosus",
+                "line_of_therapy": "not specified - used with standard therapy",
+                "histology": "systemic lupus erythematosus",
+                "biomarkers": [
+                    "No biomarker requirement specified"
+                ],
+                "regions": [
+                    "USA"
+                ],
+                "regimen": {
+                    "components": [
+                        "anifrolumab-fnia",
+                        "standard therapy"
+                    ],
+                    "dose_keytruda": [
+                        "300 mg every 4 weeks as an intravenous infusion over a 30-minute period"
+                    ]
+                }
+            },
+            "TargetPopulation": {
+                "age_range": "adult patients",
+                "sex": "",
+                "ECOG_status": "Not specified in package insert",
+                "prior_therapy": "receiving standard therapy",
+                "brain_mets_allowed": "Not applicable for SLE indication"
+            },
+            "Efficacy": {
+                "PrimaryEndpoints": [
+                    {
+                        "trial_name": "Trials 2 and 3 (Phase III)",
+                        "endpoint_name": "SLE Responder Index-4 (SRI-4) response at Week 52",
+                        "hazard_ratio": "Not applicable (binary endpoint)",
+                        "confidence_interval": "Information provided in clinical studies section",
+                        "median_value": "Not applicable - responder rate endpoint"
+                    }
+                ],
+                "SecondaryEndpoints": [
+                    {
+                        "trial_name": "Trials 2 and 3",
+                        "endpoint_name": "Key secondary endpoints",
+                        "summary": "Detailed information in clinical studies section including BILAG organ system improvements and glucocorticoid reduction"
+                    }
+                ]
+            },
+            "TrialDesign": [
+                {
+                    "trial_name": "Trial 2 (TULIP-2)",
+                    "phase": "3",
+                    "design": "Randomized, multicenter, double-blind, placebo-controlled",
+                    "N": "457",
+                    "control_type": "Placebo",
+                    "PD_L1_requirement": "No biomarker requirement",
+                    "key_arms": [
+                        "SAPHNELO 300 mg every 4 weeks",
+                        "Placebo"
+                    ]
+                },
+                {
+                    "trial_name": "Trial 3 (TULIP-1)",
+                    "phase": "3",
+                    "design": "Randomized, multicenter, double-blind, placebo-controlled",
+                    "N": "362",
+                    "control_type": "Placebo",
+                    "PD_L1_requirement": "No biomarker requirement",
+                    "key_arms": [
+                        "SAPHNELO 300 mg every 4 weeks",
+                        "Placebo"
+                    ]
+                }
+            ],
+            "SafetyTolerability": {
+                "common_AEs_20pct_plus": [
+                    "Upper respiratory tract infection (34%)",
+                    "Nasopharyngitis",
+                    "Pharyngitis"
+                ],
+                "lab_abnormalities_20pct_plus": [
+                    "Information not explicitly provided in 20%+ threshold format in package insert"
+                ]
+            },
+            "ComparativeAdvantage": []
+        }
+    ]
+}
